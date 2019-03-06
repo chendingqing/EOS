@@ -76,3 +76,7 @@ Route::patch('background/posts/{posts}', ['as'=> 'background.posts.update', 'use
 Route::delete('background/posts/{posts}', ['as'=> 'background.posts.destroy', 'uses' => 'Background\PostController@destroy']);
 Route::get('background/posts/{posts}', ['as'=> 'background.posts.show', 'uses' => 'Background\PostController@show']);
 Route::get('background/posts/{posts}/edit', ['as'=> 'background.posts.edit', 'uses' => 'Background\PostController@edit']);
+
+//首页注册
+
+Route::get('/home/reg_user','Home\IndexController@reg_user')->name('home.reg_user');

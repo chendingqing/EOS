@@ -121,7 +121,7 @@
                                     </div>--}}
                                 </div><!-- /widget-main -->
 
-                        {{--        <div class="toolbar clearfix">
+                                <div class="toolbar clearfix">
                                     <div>
                                         <a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
                                             <i class="icon-arrow-left"></i>
@@ -135,7 +135,7 @@
                                             <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
-                                </div>--}}
+                                </div>
                             </div><!-- /widget-body -->
                         </div><!-- /login-box -->
 
@@ -185,39 +185,46 @@
                                 <div class="widget-main">
                                     <h4 class="header green lighter bigger">
                                         <i class="icon-group blue"></i>
-                                        New User Registration
+                                            注册用户
                                     </h4>
 
                                     <div class="space-6"></div>
-                                    <p> Enter your details to begin: </p>
+                                    <p> 请输入你的信息 </p>
 
                                     <form>
                                         <fieldset>
-                                            <label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="icon-envelope"></i>
-														</span>
-                                            </label>
+
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" name="username" class="form-control" placeholder="用户名" />
 															<i class="icon-user"></i>
 														</span>
                                             </label>
-
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="phone" name="phone" class="form-control" placeholder="电话" />
+															<i class="icon-phone"></i>
+														</span>
+                                            </label>
+                                            <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" name="password" class="form-control" placeholder="登陆密码" />
 															<i class="icon-lock"></i>
 														</span>
                                             </label>
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
-															<i class="icon-retweet"></i>
+															<input type="password" name="pay_password" class="form-control" placeholder="支付密码" />
+															<i class="icon-lock"></i>
+														</span>
+                                            </label>
+
+                                            <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" name="email" class="form-control" placeholder="邮箱" />
+															<i class="glyphicon glyphicon-comment"></i>
 														</span>
                                             </label>
 
