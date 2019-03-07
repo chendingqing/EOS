@@ -191,7 +191,7 @@
                                     <div class="space-6"></div>
                                     <p> 请输入你的信息 </p>
 
-                                    <form>
+                                    <form action="{{route('reg.reg')}}" method="post">
                                         <fieldset>
 
 
@@ -231,8 +231,8 @@
                                             <label class="block">
                                                 <input type="checkbox" class="ace" />
 														<span class="lbl">
-															I accept the
-															<a href="#">User Agreement</a>
+														我同意
+															<a href="#">注册条款</a>
 														</span>
                                             </label>
 
@@ -241,13 +241,13 @@
                                             <div class="clearfix">
                                                 <button type="reset" class="width-30 pull-left btn btn-sm">
                                                     <i class="icon-refresh"></i>
-                                                    Reset
+                                                  重置
                                                 </button>
 
-                                                <button type="button" class="width-65 pull-right btn btn-sm btn-success">
-                                                    Register
+                                                <submit type="submit" class="width-65 pull-right btn btn-sm btn-success">
+                                                    注册
                                                     <i class="icon-arrow-right icon-on-right"></i>
-                                                </button>
+                                                </submit>
                                             </div>
                                         </fieldset>
                                     </form>
@@ -256,7 +256,7 @@
                                 <div class="toolbar center">
                                     <a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
                                         <i class="icon-arrow-left"></i>
-                                        Back to login
+                                       登录
                                     </a>
                                 </div>
                             </div><!-- /widget-body -->

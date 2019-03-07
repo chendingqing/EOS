@@ -25,6 +25,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Auth','middleware' =>'auth'],
     Route::get('user/delete/{id}','UserController@user_delete');
     Route::get('user/edit/{id}','UserController@user_edit');
     Route::post('user/update', ['as' => 'admin.user.update', 'uses' => 'UserController@update_user']);
+    //注册用户管理
+    Route::get('reg_user','RegUserController@index');
+    Route::post('user', ['as' => 'admin.user', 'uses' => 'UserController@add_user']);
+    Route::get('user_list_delete/delete/{id}','RegUserController@user_list_delete');
+    Route::get('user/edit/{id}','UserController@user_edit');
+    Route::post('user/update', ['as' => 'admin.user.update', 'uses' => 'UserController@update_user']);
     //角色管理
     Route::get('role','UserController@role_list');
     Route::get('role/delete/{id}','UserController@role_delete');
@@ -79,4 +85,7 @@ Route::get('background/posts/{posts}/edit', ['as'=> 'background.posts.edit', 'us
 
 //首页注册
 
-Route::get('/home/reg_user','Home\IndexController@reg_user')->name('home.reg_user');
+Route::get('/home/index','Home\IndexController@index')->name('home.index');
+
+Route::any('/home/reg_user', "Home\RegUserController@reg_user")->name("home.reg_user");
+Route::any('/home/reg', "Home\RegUserController@reg")->name("home.reg");
