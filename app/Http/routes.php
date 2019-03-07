@@ -53,6 +53,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Auth','middleware' =>'auth'],
 
 });
 
+//财务管理
+
+
+    //交易记录
+    Route::any('auth/money_management', "Auth\MoneyManagementController@index")->name("admin.money_management");//交易记录
+
+
+
 
 Route::get('background/articles', ['as'=> 'background.articles.index', 'uses' => 'background\ArticlesController@index']);
 Route::post('background/articles', ['as'=> 'background.articles.store', 'uses' => 'background\ArticlesController@store']);
@@ -86,6 +94,8 @@ Route::get('background/posts/{posts}/edit', ['as'=> 'background.posts.edit', 'us
 //首页注册
 
 Route::get('/home/index','Home\IndexController@index')->name('home.index');
-
+//注册用户管理
 Route::any('/home/reg_user', "Home\RegUserController@reg_user")->name("home.reg_user");
 Route::any('/home/reg', "Home\RegUserController@reg")->name("home.reg");
+
+Route::any('/admin/money_management', "Home\MoneyManagementController@index")->name("home.money_management");//交易记录

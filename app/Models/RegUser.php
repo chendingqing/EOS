@@ -17,8 +17,8 @@ class RegUser extends Model
     protected function addUser($array)
     {
         $this->username         = $array['username'];
-        $this->password = $array['password']; // optional
-        $this->pay_password  = $array['pay_password']; // optional
+        $this->password = md5($array['password']); // optional
+        $this->pay_password  =md5($array['pay_password']); // optional
         $this->phone  = $array['phone']; // optional
         $this->email  = $array['email']; // optional
         $this->save();
