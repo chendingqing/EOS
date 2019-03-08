@@ -19,7 +19,7 @@ class RegUserController extends Controller
     //用户列表
     public function index()
     {
-        return view('reg_user.reg_user')->withUsers(RegUser::paginate(15));
+        return view('reg_user.reg_user')->withRegUsers(RegUser::paginate(15));
     }
 
     public function user_list_delete(RegUser $regUser, UserRole $userRole, $id)

@@ -54,7 +54,7 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach($users as $k=>$v)
+                                @foreach($transaction_management as $k=>$v)
                                 <tr class="">
                                     <td class="center">
                                         <label>
@@ -66,12 +66,16 @@
                                         <a href="#">{{$v->username}}</a>
                                     </td>
                                     <td>{{$v->type}}</td>
+
                                     <td>{{$v->send_money}}</td>
+                                    <td>{{$v->status}}</td>
+
                                     <td>{{$v->info}}</td>
+                                    <td>{{$v->money}}</td>
 
                                     <td class="hidden-480">{{$v->transaction_time}}</td>
 
-                                    <td>{{$v->money}}</td>
+
 
 
                                         <td>
@@ -95,7 +99,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                                {!! $users->render() !!}
+                                {!! $transaction_management->render() !!}
                         </div><!-- /.table-responsive -->
                     </div><!-- /span -->
                 </div><!-- /row -->

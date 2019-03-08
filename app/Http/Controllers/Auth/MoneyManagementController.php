@@ -19,7 +19,7 @@ class MoneyManagementController extends Controller
     //用户列表
     public function index()
     {
-        return view('/money_management/index')->withUsers(TransactionManagement::paginate(15));
+        return view('/money_management/index')->withTransactionManagement(TransactionManagement::paginate(15));
     }
 
 

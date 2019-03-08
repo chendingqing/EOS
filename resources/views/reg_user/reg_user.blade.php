@@ -51,7 +51,7 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach($users as $k=>$v)
+                                @foreach($reg_users as $k=>$v)
                                 <tr class="">
                                     <td class="center">
                                         <label>
@@ -90,7 +90,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                                {!! $users->render() !!}
+                                {!! $reg_users->render() !!}
                         </div><!-- /.table-responsive -->
                     </div><!-- /span -->
                 </div><!-- /row -->
