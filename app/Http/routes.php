@@ -55,11 +55,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Auth','middleware' =>'auth'],
 
 //财务管理
 
-
     //交易记录
-    Route::any('auth/money_management', "Auth\MoneyManagementController@index")->name("admin.money_management");//交易记录
-
-
+    Route::any('auth/money_management', "Auth\MoneyManagementController@index")->name("admin.money_management");
+    //充值记录
+    Route::any('admin/recharge_record', "Auth\RechargeRecordController@index")->name("admin.recharge_record");
 
 
 Route::get('background/articles', ['as'=> 'background.articles.index', 'uses' => 'background\ArticlesController@index']);

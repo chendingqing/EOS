@@ -8,7 +8,7 @@
                 财务管理
                 <small>
                     <i class="icon-double-angle-right"></i>
-                     交易记录
+                     充值记录
                 </small>
             </h1>
         </div><!-- /.page-header -->
@@ -40,25 +40,25 @@
                                     </th>
                                     <th>用户名</th>
                                     <th>交易类型</th>
-                                    <th>交易金额</th>
+                                    <th>支付金额</th>
+                                    <th>入账金额</th>
+                                    <th>下单时间</th>
                                     <th>状态</th>
-                                    <th>说明</th>
-                                    <th>可用余额</th>
                                     <th>
                                         <i class="icon-time bigger-110 hidden-480"></i>
-                                        交易时间
+                                        入账时间
                                     </th>
 
-                                    <th>操作</th>
+                                    {{--<th>操作</th>--}}
                                 </tr>
                                 </thead>
 
                                 <tbody>
-                                @foreach($transaction_management as $k=>$v)
+                                @foreach($recharge_record as $k=>$v)
                                 <tr class="">
                                     <td class="center">
                                         <label>
-                                            <span class="lbl">{{$k+1}}</span>
+                                            <span class="lbl">{{$v->order_id}}</span>
                                         </label>
                                     </td>
 
@@ -67,27 +67,27 @@
                                     </td>
                                     <td>{{$v->type}}</td>
 
-                                    <td>{{$v->send_money}}</td>
+                                    <td>{{$v->pay_money}}</td>
+                                    <td>{{$v->entry_money}}</td>
+
+                                    <td>{{$v->order_time}}</td>
                                     <td>{{$v->status}}</td>
 
-                                    <td>{{$v->info}}</td>
-                                    <td>{{$v->money}}</td>
-
-                                    <td class="hidden-480">{{$v->transaction_time}}</td>
+                                    <td class="hidden-480">{{$v->entry_time}}</td>
 
 
 
 
-                                        <td>
+                                        {{--<td>
                                             <div class="btn-group">
-                                                {{--<a data-toggle="modal"  data-target="#mmmm" class="btn btn-xs btn-info" href="{{url('admin/user/edit',['id'=>$v->id])}}">--}}
-                                                    {{--<i class="icon-edit bigger-120">分配角色</i>--}}
-                                                {{--</a>--}}
-                                                <a class="btn btn-xs btn-danger" data-toggle="modal"  data-target="#confirm-delete" data-href="{{url('admin/user_list_delete/delete',['id'=>$v->id])}}">
-                                                    <i class="icon-trash bigger-120">删除</i>
-                                                </a>
+                                                --}}{{--<a data-toggle="modal"  data-target="#mmmm" class="btn btn-xs btn-info" href="{{url('admin/user/edit',['id'=>$v->id])}}">--}}{{--
+                                                    --}}{{--<i class="icon-edit bigger-120">分配角色</i>--}}{{--
+                                                --}}{{--</a>--}}{{--
+                                                --}}{{--<a class="btn btn-xs btn-danger" data-toggle="modal"  data-target="#confirm-delete" data-href="{{url('admin/user_list_delete/delete',['id'=>$v->id])}}">--}}{{--
+                                                    --}}{{--<i class="icon-trash bigger-120">删除</i>--}}{{--
+                                                --}}{{--</a>--}}{{--
                                             </div>
-                                        </td>
+                                        </td>--}}
 
                                             {{--<td>--}}
                                                 {{--<div class="btn-group">--}}
@@ -99,7 +99,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                                {!! $transaction_management->render() !!}
+                                {!! $recharge_record->render() !!}
                         </div><!-- /.table-responsive -->
                     </div><!-- /span -->
                 </div><!-- /row -->
