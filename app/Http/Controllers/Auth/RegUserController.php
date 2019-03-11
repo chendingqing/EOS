@@ -16,12 +16,22 @@ use DB;
 
 class RegUserController extends Controller
 {
-    //用户列表
+    /**
+     * 前台用户管理
+     * @return mixed
+     */
     public function index()
     {
         return view('reg_user.reg_user')->withRegUsers(RegUser::paginate(15));
     }
 
+    /**
+     * 删除记录
+     * @param RegUser $regUser
+     * @param UserRole $userRole
+     * @param $id
+     * @return bool|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function user_list_delete(RegUser $regUser, UserRole $userRole, $id)
     {
         if (!$id) return false;

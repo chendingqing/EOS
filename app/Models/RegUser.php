@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 class RegUser extends Model
 {
 
-    protected function addUser($array)
+    public function addUser($array)
     {
         $this->username         = $array['username'];
         $this->password = md5($array['password']); // optional
@@ -23,5 +23,6 @@ class RegUser extends Model
         $this->email  = $array['email']; // optional
         $this->save();
     }
+
 
 }

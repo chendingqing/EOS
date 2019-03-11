@@ -95,6 +95,7 @@ Route::get('background/posts/{posts}/edit', ['as'=> 'background.posts.edit', 'us
 Route::get('/home/index','Home\IndexController@index')->name('home.index');
 //注册用户管理
 Route::any('/home/reg_user', "Home\RegUserController@reg_user")->name("home.reg_user");
-Route::any('/home/reg', "Home\RegUserController@reg")->name("home.reg");
+Route::post('/home/reg', "Home\RegUserController@reg")->name("reg.reg");
+Route::post('/home/login', "Home\RegUserController@login")->name("reg.login");
 
 Route::any('/admin/money_management', "Home\MoneyManagementController@index")->name("home.money_management");//交易记录

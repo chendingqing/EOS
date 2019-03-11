@@ -17,7 +17,10 @@ use DB;
 
 class RechargeRecordController extends Controller
 {
-    //充值记录
+    /**\
+     * 充值记录
+     * @return mixed0
+     */
     public function index()
     {
         return view('/recharge_record/index')->withRechargeRecord(RechargeRecord::paginate(15));

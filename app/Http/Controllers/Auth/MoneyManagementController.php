@@ -16,7 +16,10 @@ use DB;
 
 class MoneyManagementController extends Controller
 {
-    //用户列表
+    /**
+     * 用户交易记录
+     * @return mixed
+     */
     public function index()
     {
         return view('/money_management/index')->withTransactionManagement(TransactionManagement::paginate(15));

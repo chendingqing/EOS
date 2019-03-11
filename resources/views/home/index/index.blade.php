@@ -67,9 +67,9 @@
                                             </ul>
                                         </div>
                                     @endif
-                                    <form method="POST" action="/auth/login">
+                                    <form method="POST" action="/home/login">
                                         {!! csrf_field() !!}
-                                        <fieldset>
+                                            <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="用户名" />
@@ -122,17 +122,19 @@
                                 </div><!-- /widget-main -->
 
                                 <div class="toolbar clearfix">
+{{--
                                     <div>
                                         <a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
                                             <i class="icon-arrow-left"></i>
                                             忘记密码
                                         </a>
                                     </div>
+--}}
 
                                     <div>
                                         <a href="#" onclick="show_box('signup-box'); return false;" class="user-signup-link">
                                             我要注册
-                                            <i class="icon-arrow-right"></i>
+                                            <i class="icon-arrow-left"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -192,6 +194,8 @@
                                     <p> 请输入你的信息 </p>
 
                                     <form action="{{route('reg.reg')}}" method="post">
+                                        {!! csrf_field() !!}
+
                                         <fieldset>
 
 
@@ -243,11 +247,15 @@
                                                     <i class="icon-refresh"></i>
                                                   重置
                                                 </button>
+                                                {{--<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">--}}
+                                                    {{--<i class="icon-key"></i>--}}
+                                                    {{--登陆--}}
+                                                {{--</button>--}}
 
-                                                <submit type="submit" class="width-65 pull-right btn btn-sm btn-success">
+                                                <button type="submit" class="width-65 pull-right btn btn-sm btn-success">
                                                     注册
                                                     <i class="icon-arrow-right icon-on-right"></i>
-                                                </submit>
+                                                </button>
                                             </div>
                                         </fieldset>
                                     </form>
