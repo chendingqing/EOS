@@ -1,6 +1,4 @@
 ##预览
-![ss](public/1.png)
-![ss](public/2.png)
 
 ##功能概述
 - 完善的权限管理,每个url权限管理,RBAC模式
@@ -12,4 +10,3 @@
 ##使用
 1. composer install
 2. 生成.env文件
-3. php artisan migrate --seed
