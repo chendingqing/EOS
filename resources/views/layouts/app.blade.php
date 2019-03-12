@@ -29,6 +29,10 @@
     <script src="{{ URL::asset('assets/js/html5shiv.js')}}"></script>
     <script src="{{ URL::asset('assets/js/respond.min.js')}}"></script>
     <![endif]-->
+{{--ueditor编辑器--}}
+    <script type="text/javascript" charset="utf-8" src="../ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../ueditor/ueditor.all.min.js"> </script>
+
 </head>
 
 <body>
@@ -219,5 +223,6 @@
 <script src="{{ URL::asset('assets/js/ace-elements.min.js')}}"></script>
 <script src="{{ URL::asset('assets/js/ace.min.js')}}"></script>
 @yield('script')
+
 </body>
 </html>

@@ -53,12 +53,24 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Auth','middleware' =>'auth'],
 
 });
 
-//财务管理
-
+/**
+ * 财务管理
+*/
     //交易记录
     Route::any('auth/money_management', "Auth\MoneyManagementController@index")->name("admin.money_management");
     //充值记录
     Route::any('admin/recharge_record', "Auth\RechargeRecordController@index")->name("admin.recharge_record");
+/**
+ * 新闻管理
+ */
+Route::any('admin/article', "Auth\ArticleController@index")->name("admin.article");
+Route::post('admin/article/add', "Auth\ArticleController@add")->name("admin.article.add");
+Route::get('admin/article/edit/{id}','Auth\ArticleController@edit');
+Route::post('admin/article/update','Auth\ArticleController@update')->name("admin.article.update");
+Route::get('admin/article/delete/{id}','Auth\ArticleController@delete');
+
+
+
 
 
 Route::get('background/articles', ['as'=> 'background.articles.index', 'uses' => 'background\ArticlesController@index']);
