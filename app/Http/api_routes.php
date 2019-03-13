@@ -14,3 +14,9 @@
 
 
 Route::resource('tags', 'TagsAPIController');
+
+
+
+
+
+
