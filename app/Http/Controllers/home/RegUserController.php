@@ -53,8 +53,8 @@ class RegUserController extends Controller
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
-        'name' => 'required|max:255|unique:users',
-        'password' => 'required|confirmed:password_confirmation',
+        'name' => 'required',
+        'password' => 'required',
     ]);
         if($validator->fails()) {
             return redirect('/')->withErrors($validator)->withInput();
