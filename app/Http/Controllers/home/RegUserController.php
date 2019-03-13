@@ -73,9 +73,6 @@ class RegUserController extends Controller
       }
 
 
-
-
-
     }
 
 }
