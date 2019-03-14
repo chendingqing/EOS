@@ -68,7 +68,14 @@ Route::post('admin/article/add', "Auth\ArticleController@add")->name("admin.arti
 Route::get('admin/article/edit/{id}','Auth\ArticleController@edit');
 Route::post('admin/article/update','Auth\ArticleController@update')->name("admin.article.update");
 Route::get('admin/article/delete/{id}','Auth\ArticleController@delete');
-
+/**
+ *发表项目
+ */
+Route::any('admin/goods', "Auth\GoodsController@index")->name("admin.goods");
+Route::any('admin/goods/add', "Auth\GoodsController@add")->name("admin.goods.add");
+Route::post('admin/goods/add', "Auth\GoodsController@add")->name("admin.goods.add");
+Route::any('admin/goods/edit/{id}', "Auth\GoodsController@edit")->name("admin.goods.edit");
+Route::any('admin/goods/delete/{id}', "Auth\GoodsController@delete")->name("admin.goods.delete");
 
 
 

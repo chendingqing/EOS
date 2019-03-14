@@ -189,7 +189,7 @@ return [
         |    http://prettus.local/?search=lorem&searchFields=name:like;email
         |    http://prettus.local/?search=lorem&searchFields=name:like
         |
-        | - filter : Fields that must be returned to the response object
+        | - filter : Fields that must be returned to the response goods
         |   Ex:
         |   http://prettus.local/?search=lorem&filter=id,name
         |

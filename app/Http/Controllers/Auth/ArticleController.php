@@ -19,7 +19,9 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return view('.article/index')->withArticles(Article::paginate(15));
+
+
+        return view('article/index')->withArticles(Article::paginate(15));
 
     }
 
@@ -73,7 +75,5 @@ class ArticleController extends Controller
         $article->where('id', $id)->delete();
         return redirect('admin/article');
     }
-
-
 
 }

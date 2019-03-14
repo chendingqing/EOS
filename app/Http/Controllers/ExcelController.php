@@ -30,11 +30,11 @@ class ExcelController extends Controller
 //        })->export('xls');
         //导出数据库配置
         $data=DB::table('migrations')->get();
-//        dd($data);
         Excel::create('突突', function ($excel) use ($data) {
             $excel->sheet('ghg', function ($sheet) use ($data) {
                 $sheet->rows($data);
             });
          })->export('xls');;
     }
+
 }

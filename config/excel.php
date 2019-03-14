@@ -480,7 +480,7 @@ return array(
             | Default date format
             |--------------------------------------------------------------------------
             |
-            | If set to false, a carbon object will return
+            | If set to false, a carbon goods will return
             |
             */
             'format'  => false,
