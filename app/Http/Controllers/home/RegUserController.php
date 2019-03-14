@@ -35,11 +35,18 @@ class RegUserController extends Controller
     public function reg(RegUser $regUser,Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'username' => 'required|max:255|unique:users',
-            'password' => 'required|confirmed:password_confirmation',
-            'pay_password' => 'required|confirmed:password_confirmation',
-            'phone' => 'required',
-            'email' => 'required',
+            'username' => 'required|max:255',
+            'password' => 'required|max:16|min:6',
+            'pay_password' => 'required',
+            'phone' => [
+                'required',
+                'regex:/^[1][3,4,5,7,8,9][0-9]{9}$/'
+            ],
+            'email' => [
+                'required',
+                'regex:/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/'
+            ],
+
         ]);
         if($validator->fails()) {
             return redirect('/')->withErrors($validator)->withInput();
