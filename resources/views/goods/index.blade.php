@@ -113,30 +113,48 @@
                         <div class="modal-body">
                             {!! csrf_field() !!}
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名:</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 项目名称:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="name" id="form-field-1" placeholder="用户名" class="col-xs-10 col-sm-10">
+                                    <input type="text" name="name" id="form-field-1" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="space-4"></div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email:</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 满标数值:</label>
                                 <div class="col-sm-9">
-                                    <input type="email" id="form-field-1" name="email" placeholder="Email" class="col-xs-10 col-sm-10">
+                                    <input type="text" id="form-field-1" name="max_money" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="space-4"></div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">密码:</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">起投数值:</label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-1" name="password" placeholder="密码" class="col-xs-10 col-sm-10">
+                                    <input type="text" id="form-field-1" name="min_money" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="space-4"></div>
                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">确认密码:</label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">投资币种</label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-1" name="password_confirmation" placeholder="确认密码" class="col-xs-10 col-sm-10">
+                                    <input type="password" id="form-field-1" name="investment" placeholder="" class="col-xs-10 col-sm-10">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">收益币种</label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="form-field-1" name="profit" placeholder="" class="col-xs-10 col-sm-10">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">简介</label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="form-field-1" name="content" placeholder="" class="col-xs-10 col-sm-10">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1">开标时间</label>
+                                <div class="col-sm-9">
+                                    <input type="date" id="form-field-1" name="open_time" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="space-4"></div>
