@@ -82,6 +82,9 @@
                                         @endif
                                         <td>
                                             <div class="btn-group">
+                                                <a data-toggle="modal" data-target="#mmmm" class="btn btn-xs btn-info" href="{{url('admin/goods/edit',['id'=>$v->id])}}">
+                                                    <i class="icon-edit bigger-120">编辑</i>
+                                                </a>
                                                 <a class="btn btn-xs btn-danger" data-toggle="modal"  data-target="#confirm-delete" data-href="{{url('admin/goods/delete',['id'=>$v->id])}}">
                                                     <i class="icon-trash bigger-120">删除</i>
                                                 </a>
@@ -136,19 +139,19 @@
                            <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1">投资币种</label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-1" name="investment" placeholder="" class="col-xs-10 col-sm-10">
+                                    <input type="text" id="form-field-1" name="investment" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1">收益币种</label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-1" name="profit" placeholder="" class="col-xs-10 col-sm-10">
+                                    <input type="text" id="form-field-1" name="profit" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1">简介</label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-1" name="content" placeholder="" class="col-xs-10 col-sm-10">
+                                    <input type="text" id="form-field-1" name="content" placeholder="" class="col-xs-10 col-sm-10">
                                 </div>
                             </div>
                             <div class="form-group">

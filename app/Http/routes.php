@@ -75,6 +75,7 @@ Route::any('admin/goods', "Auth\GoodsController@index")->name("admin.goods");
 Route::any('admin/goods/add', "Auth\GoodsController@add")->name("admin.goods.add");
 Route::post('admin/goods/add', "Auth\GoodsController@add")->name("admin.goods.add");
 Route::any('admin/goods/edit/{id}', "Auth\GoodsController@edit")->name("admin.goods.edit");
+Route::post('admin/goods/update', "Auth\GoodsController@update")->name("admin.goods.update");
 Route::any('admin/goods/delete/{id}', "Auth\GoodsController@delete")->name("admin.goods.delete");
 
 
@@ -109,6 +110,10 @@ Route::delete('background/posts/{posts}', ['as'=> 'background.posts.destroy', 'u
 Route::get('background/posts/{posts}', ['as'=> 'background.posts.show', 'uses' => 'Background\PostController@show']);
 Route::get('background/posts/{posts}/edit', ['as'=> 'background.posts.edit', 'uses' => 'Background\PostController@edit']);
 
+
+/**
+ * HOME
+ */
 //首页注册
 
 Route::get('/home/index','Home\IndexController@index')->name('home.index');

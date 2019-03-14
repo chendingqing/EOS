@@ -43,7 +43,7 @@ class GoodsController extends Controller
             'content' => 'required',
             'open_time' => 'required',
         ]);
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return redirect('/')->withErrors($validator)->withInput();
         }
 
@@ -52,6 +52,46 @@ class GoodsController extends Controller
 
     }
 
+    /**
+     * 编辑数据
+     * @param Good $good
+     * @param $id
+     * @return bool
+     */
+    public function edit(Good $good, $id)
+    {
+        if (!$id) return false;
+        return view('goods.edit')
+            ->withGood($good->find($id));
+    }
+
+    /**
+     *更新数据
+     */
+    public function update(Good $good, Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'max_money' => 'required|max:16|min:6',
+            'min_money' => 'required',
+            'investment' => 'required',
+            'profit' => 'required',
+            'content' => 'required',
+            'open_time' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return redirect('admin/goods')->withErrors($validator)->withInput();
+        }
+        $good->updateGoods($request->all());
+        return redirect('admin/goods');
+    }
+
+    public function delete(Good $good,$id)
+    {
+        if(!$id) return false;
+        $good->where('id', $id)->delete();
+        return redirect('admin/goods');
+    }
 
 
 }

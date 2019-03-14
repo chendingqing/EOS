@@ -65,14 +65,11 @@
                                         <td class="hidden-480">{{$v->created_at}}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a data-toggle="modal" data-target="#mmmm" class="btn btn-xs btn-info"
-                                                   href="{{url('admin/article/edit',['id'=>$v->id])}}">
+                                                <a data-toggle="modal" data-target="#mmmm" class="btn btn-xs btn-info" href="{{url('admin/article/edit',['id'=>$v->id])}}">
                                                     <i class="icon-edit bigger-120">编辑</i>
                                                 </a>
 
-                                                <a class="btn btn-xs btn-danger" data-toggle="modal"
-                                                   data-target="#confirm-delete"
-                                                   data-href="{{url('admin/article/delete',['id'=>$v->id])}}">
+                                                <a class="btn btn-xs btn-danger" data-toggle="modal" data-target="#confirm-delete" data-href="{{url('admin/article/delete',['id'=>$v->id])}}">
                                                     <i class="icon-trash bigger-120">删除</i>
                                                 </a>
 
