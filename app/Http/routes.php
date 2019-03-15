@@ -123,3 +123,21 @@ Route::post('/home/reg', "Home\RegUserController@reg")->name("reg.reg");
 Route::post('/home/login', "Home\RegUserController@login")->name("reg.login");
 
 Route::any('/admin/money_management', "Home\MoneyManagementController@index")->name("home.money_management");//交易记录
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
